@@ -1,9 +1,9 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        for x in matrix :
-            if(target in x):
-                return True
-            else:
-                continue 
+        ROW, COL = len(matrix), len(matrix[0])
+        for r in range(ROW):
+            for c in range(COL):
+                if matrix[r][c] == target:
+                    return True
         return False
         
